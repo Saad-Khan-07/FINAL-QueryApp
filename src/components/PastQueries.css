@@ -1,0 +1,71 @@
+/* PastQueries.css */
+.PastQueriesContainer {
+    padding: 60px;
+  }
+  
+  .PastQueriesContainer .title{
+    padding-left: 60px;
+    font-size: 90px;
+    font-weight: 600;
+    letter-spacing: -3.5px;
+    color: rgb(255, 255, 255);
+  }
+
+  .accordion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .accordion-button {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+  }
+  
+  .accordion-item {
+    margin-bottom: 10px;
+    width: 92.5%;
+  }
+  
+  .accordion-body {
+    padding: 20px;
+  }
+  
+  .update-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    width: 150px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .update-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .buttons {
+    margin-top: 10px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }

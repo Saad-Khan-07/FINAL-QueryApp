@@ -1,0 +1,82 @@
+const [userval, setUserValue] = useState('');
+    const [passval, setPassValue] = useState('');
+
+    const storeuser = (event) => {
+        setUserValue(event.target.value);
+    };
+
+    const storepass = (event) => {
+        setPassValue(event.target.value);
+    };
+
+    const handlelogin = async (e) => {
+        e.preventDefault();
+
+        // Create the JSON data
+        const loginData = {
+            username: userval,
+            password: passval
+        };
+
+        try {
+            const response = await fetch('http://127.0.0.1:8000/gettoken', {  // Use /gettoken endpoint
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(loginData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log("Login successful:", data);
+                console.log("Access Token:", data.access);  // Print the access token
+                console.log("Refresh Token:", data.refresh); // Print the refresh token
+                allowDashboard(); // Redirect to dashboard
+            } else {
+                console.log("Login failed:", data);
+                // Handle error response here
+            }
+        } catch (error) {
+            console.error("Error during login:", error);
+        }
+    };
+
+
+
+
+
+
+
+QueryCards\
+const [queries, setQueries] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Retrieve the access token from local storage
+        const accessToken = localStorage.getItem('accessToken');
+        console.log("Access Token:", accessToken);
+
+        const response = await fetch("http://127.0.0.1:8000/queryapiview", {
+          method: "GET",
+          headers: {
+            'Authorization': `Bearer 28ac8620a904aab63945a552a5a5cfe5ad688c54`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+        setQueries(data); // Set the data in state
+        console.log("Data fetched from API:", data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);

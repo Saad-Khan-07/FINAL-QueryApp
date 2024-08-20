@@ -1,0 +1,428 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  background-color: rgb(46, 46, 90);
+  display: flex;
+  flex-direction: column; /* Align components vertically */
+}
+
+.Navbar {
+  flex: 0 0 60px; /* Adjust height of the Navbar as needed */
+  width: 100%;
+  position: fixed; /* Keep Navbar fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top */
+  background-color: rgb(46, 46, 90);
+}
+
+.cardlayout {
+  padding-top: 60px;  
+  padding-bottom: 80px;
+  flex: 1; /* Occupies the remaining space, which is 80% */
+  width: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardlayout h2{
+  padding-left: 110px;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: -3.5px;
+  color: rgb(255, 255, 255);
+}
+
+.complaintracker h2{
+  padding-bottom: 30px;
+  padding-left: 70px;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: -3.5px;
+  color: rgb(255, 255, 255);
+}
+
+
+.contain h2{
+  padding-left: 60px;
+  font-size: 90px;
+  font-weight: 600;
+  letter-spacing: -3.5px;
+  color: rgb(255, 255, 255);
+}
+
+.card {
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+  background-color: rgb(193, 202, 236); /* Initial card color */
+  transition: all 0.3s ease-in-out; /* Apply transition to all properties */
+}
+
+.card:hover {
+  background-color: rgba(0,0,0,0.4); /* Orange */
+  color: rgba(193, 202, 236);
+  transform: translateY(-5px); /* Lift up by 5px on hover */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.card-text{
+  text-align: left;
+}
+
+.foot {
+  flex: 0 0 10%; /* Occupies 10% of the height */
+  padding: 0px 20px;
+  background-color: rgb(28, 28, 39);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 40px;
+  width: 100%;
+  position: fixed; /* Keep Footer fixed */
+  bottom: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.foot .logo {
+  padding-left: 10px;
+}
+
+.foot .socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foot .footer-bottom {
+  padding-left: 30px;
+}
+
+.foot .socials i {
+  font-size: 1.35em;  
+  padding: 0 10px;
+}
+
+.formessentials{
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.form-instructions{
+  /* background-color: red; */
+  width: 35%;
+  height: 100%;
+  color: white;
+  /* background-color: salmon; */
+  padding-left: 70px;
+  padding-top: 65px;
+}
+
+.forminfo{
+  border-left: solid white 2px;
+  width: 60%;
+  height: 100%;
+  color: white;
+  padding-right: 80px;
+  padding-top: 50px;
+}
+
+/* 
+.border{
+  height: 80%;
+  border: solid white 2px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
+} */
+
+.Complain{
+  flex: 1; /* Occupies the remaining space, which is 80% */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.complaintracker{
+  padding-top: 60px;  
+    flex: 1; /* Occupies the remaining space, which is 80% */
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.mainlogin{
+  padding-top: 60px;  
+  flex: 1; /* Occupies the remaining space, which is 80% */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PastQueriesContainer{
+  flex: 1; /* Occupies the remaining space, which is 80% */
+  width: 100%;
+}
+
+.complain-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between rows */
+  margin-top: 20px;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+  align-self: center;
+}
+
+.form-group textarea,
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonform{
+  padding-left: 50px;
+}
+
+.status-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: rgba(174, 192, 236, 0.991);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 5px;
+  height: 80px;
+  padding: 0 20px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.status-card:hover {
+  transform: translateY(-5px); /* Lift the card up by 5px */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase the shadow to enhance the lift effect */
+}
+
+.query-cards{
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center; 
+}
+
+.Logincontent {
+  height: 82.50%;
+  width: 100%;
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Logincontainer {
+  background-color: rgba(255,255,255,0.8);
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #604caf;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #161337;
+}
+
+.signup {
+  margin-top: 20px;
+}
+
+.signup p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.signup a {
+  color: #293148;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+.accordion{
+  padding-top: 60px;
+}
+
+.accordion-item .buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  padding-bottom: 5px;
+}
+
+.accordion-button:hover{
+  background-color: rgb(151, 165, 223);
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 80px;
+  height: 60px;
+  background-color: #007bff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s, height 0.3s;
+  z-index: 1000;
+}
+
+.chatbot-container.open {
+  width: 350px;
+  height: 400px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-header {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  /* border-radius: 15px 15px 0 0; */
+  cursor: pointer;
+  
+}
+
+.chatbot-header .icons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chatbot-header h6{
+  font-size: 15px;
+}
+
+.chatbot-body {
+  padding-bottom: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #007bff;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.chatbot-messages {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chatbot-message {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.chatbot-message.user {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.chatbot-input button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatbot-input button:hover {
+  background-color: #0056b3;
+}
